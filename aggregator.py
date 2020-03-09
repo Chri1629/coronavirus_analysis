@@ -1,6 +1,6 @@
 import pandas as pd
 
-dati = pd.read_csv("dati.csv")
+dati = pd.read_csv("dpc-covid19-ita-province.csv")
 regioni = pd.read_csv("regioni.csv")
 #print(dati)
 #print(regioni)
