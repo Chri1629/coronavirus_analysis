@@ -13,38 +13,46 @@ args = parser.parse_args()
 
 # Definition of interpolation function
 def func(x, a, b, c):
-    return a * np.exp(-b * x) + c
+    return a * np.exp(b * x) + c
+
+def func2(x, a, b):
+    return a * x + b
 
 def time_plot(time, data): 
     fig, ax = plt.subplots()
     plt.plot(time, data, 'ko', label="Original Data")
     plt.plot(time, func(x, *popt), 'r-', label="Fitted Curve")
+    plt.plot(time, func2(x, *popt2), 'r', label="Fitted Line")
     hfmt = mdates.DateFormatter('%d-%m')
     ax.xaxis.set_major_formatter(hfmt)
     plt.xticks(rotation = 90, fontsize=8)
     plt.legend()
     plt.show()
-    fig.savefig(args.output + '/time_plot.png', bbox_inches='tight', dpi = 600)
+    fig.savefig(args.output + '/time_plot.png', bbox_inches='tight', dpi = 300)
 
 # Import the dataset.
 dati = pd.read_csv("dati.csv")
-
 regione = dati.loc[dati['regione'] == 'Lombardia']
-print(regione)
-
 regione['data'] = pd.to_datetime(regione['data'])
-
 pd.plotting.register_matplotlib_converters()
+
 # Simple exponential regression
 x = np.linspace(0,1,len(regione['data']))
 y = func(x, 2.5, 1.3, 0.5)
+y2 = func2(x,  0,2)
 
 popt, pcov = curve_fit(func, x, regione['totale_casi'])
-print('--------------------------------------------------------------------------')
-print('I parametri stimati sono: ',popt, pcov)
+popt2, pcov2 = curve_fit(func2, x, regione['totale_casi'])
+print('--------------------------------------------------------------------------\n')
+print('I parametri stimati dai minimi quadrati per la funzione esponenziale sono: ',popt)
+print('--------------------------------------------------------------------------\n')
+print('I parametri stimati dai minimi quadrati per la retta sono: ',popt2)
+print('--------------------------------------------------------------------------\n')
+print('Le covarianze dei parametri sono: ',pcov)
+print('--------------------------------------------------------------------------\n')
+print('Le covarianze dei parametri sono: ',pcov2)
+print('--------------------------------------------------------------------------\n')
 
-print('--------------------------------------------------------------------------')
 # Some basics plot
-
 time_plot(regione['data'], regione['totale_casi'] )
 
