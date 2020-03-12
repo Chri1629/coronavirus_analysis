@@ -5,6 +5,11 @@ import numpy as np
 import matplotlib.dates as mdates
 from scipy.optimize import curve_fit
 from pandas.plotting import register_matplotlib_converters
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-d', '--output', type=str, required=True, help="Inserire la directory corrente")
+args = parser.parse_args()
 
 # Definition of interpolation function
 def func(x, a, b, c):
@@ -19,6 +24,7 @@ def time_plot(time, data):
     plt.xticks(rotation = 90, fontsize=8)
     plt.legend()
     plt.show()
+    fig.savefig(args.output + '/time_plot.png', bbox_inches='tight', dpi = 600)
 
 # Import the dataset.
 dati = pd.read_csv("dati.csv")
