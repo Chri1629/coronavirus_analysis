@@ -51,9 +51,9 @@ print('I parametri stimati dai minimi quadrati per la funzione esponenziale sono
 print('--------------------------------------------------------------------------\n')
 print('I parametri stimati dai minimi quadrati per la retta sono: ',popt2, '\n')
 print('--------------------------------------------------------------------------\n')
-print('La matrice delle covarianze dei parametri sono: ',pcov, '\n')
+print("La matrice delle covarianze dei parametri stimati dall'esponenziale sono: ",pcov, '\n')
 print('--------------------------------------------------------------------------\n')
-print('La matrice delle covarianze dei parametri sono: ',pcov2, '\n')
+print('La matrice delle covarianze dei parametri stimati dalla retta sono: ',pcov2, '\n')
 print('--------------------------------------------------------------------------\n')
 
 # Some basics plot
