@@ -31,6 +31,9 @@ def time_plot(time, data):
     fig.savefig(args.output + '/time_plot.png', bbox_inches='tight', dpi = 300)
 
 # Import the dataset.
+
+pd.options.mode.chained_assignment = None 
+
 dati = pd.read_csv("dati.csv")
 regione = dati.loc[dati['regione'] == 'Lombardia']
 regione['data'] = pd.to_datetime(regione['data'])
@@ -44,13 +47,13 @@ y2 = func2(x,  0,2)
 popt, pcov = curve_fit(func, x, regione['totale_casi'])
 popt2, pcov2 = curve_fit(func2, x, regione['totale_casi'])
 print('--------------------------------------------------------------------------\n')
-print('I parametri stimati dai minimi quadrati per la funzione esponenziale sono: ',popt)
+print('I parametri stimati dai minimi quadrati per la funzione esponenziale sono: ',popt, '\n')
 print('--------------------------------------------------------------------------\n')
-print('I parametri stimati dai minimi quadrati per la retta sono: ',popt2)
+print('I parametri stimati dai minimi quadrati per la retta sono: ',popt2, '\n')
 print('--------------------------------------------------------------------------\n')
-print('Le covarianze dei parametri sono: ',pcov)
+print('Le covarianze dei parametri sono: ',pcov, '\n')
 print('--------------------------------------------------------------------------\n')
-print('Le covarianze dei parametri sono: ',pcov2)
+print('Le covarianze dei parametri sono: ',pcov2, '\n')
 print('--------------------------------------------------------------------------\n')
 
 # Some basics plot
