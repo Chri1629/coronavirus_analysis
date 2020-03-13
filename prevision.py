@@ -21,8 +21,8 @@ def func2(x, a, b):
 def time_plot(time, data): 
     fig, ax = plt.subplots()
     plt.plot(time, data, 'ko', label="Original Data")
-    plt.plot(time, func(x, *popt), 'r-', label="Fitted Curve")
-    plt.plot(time, func2(x, *popt2), 'r', label="Fitted Line")
+    plt.plot(time, func(x, *popt), 'r-', label="Fitted Exponential")
+    plt.plot(time, func2(x, *popt2), 'r', color= 'blue', label="Fitted Line")
     hfmt = mdates.DateFormatter('%d-%m')
     ax.xaxis.set_major_formatter(hfmt)
     plt.xticks(rotation = 90, fontsize=8)
