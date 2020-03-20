@@ -33,7 +33,9 @@ def time_plot(time, data):
 # Import the dataset.
 
 pd.options.mode.chained_assignment = None 
-
+# Ricordiamo che gli attributi del nostro dataset sono i seguenti:
+# data,stato,codice_regione,denominazione_regione,lat,long,ricoverati_con_sintomi,terapia_intensiva,totale_ospedalizzati
+# ,isolamento_domiciliare,totale_attualmente_positivi,nuovi_attualmente_positivi,dimessi_guariti,deceduti,totale_casi,tamponi
 dati = pd.read_csv("dati.csv")
 regione = dati.loc[dati['regione'] == 'Lombardia']
 regione['data'] = pd.to_datetime(regione['data'])
