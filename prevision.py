@@ -23,9 +23,7 @@ def time_plot(time, data):
     plt.plot(time, data, 'ko', label="Original Data")
     plt.plot(time, func(x, *popt), 'r-', label="Fitted Exponential")
     plt.plot(time, func2(x, *popt2), 'r', color= 'blue', label="Fitted Line")
-    hfmt = mdates.DateFormatter('%d-%m')
-    ax.xaxis.set_major_formatter(hfmt)
-    plt.xticks(rotation = 90, fontsize=8)
+    plt.xticks(rotation = 45, fontsize=8)
     plt.legend()
     plt.show()
     fig.savefig(args.output + '/time_plot.png', bbox_inches='tight', dpi = 300)
@@ -37,12 +35,14 @@ pd.options.mode.chained_assignment = None
 # data,stato,codice_regione,denominazione_regione,lat,long,ricoverati_con_sintomi,terapia_intensiva,totale_ospedalizzati
 # ,isolamento_domiciliare,totale_attualmente_positivi,nuovi_attualmente_positivi,dimessi_guariti,deceduti,totale_casi,tamponi
 dati = pd.read_csv("dati.csv")
+# Rimuovo l'ora nel timestamp che tanto non è necessaria
+
 regione = dati.loc[dati['regione'] == 'Lombardia']
 regione['data'] = pd.to_datetime(regione['data'])
 pd.plotting.register_matplotlib_converters()
 
 # Simple exponential regression
-x = np.linspace(0,1,len(regione['data']))
+x = np.linspace(0, 1, len(regione['data']))
 y = func(x, 2.5, 1.3, 0.5)
 y2 = func2(x,  0,2)
 
@@ -59,5 +59,5 @@ print('La matrice delle covarianze dei parametri stimati dalla retta sono: ',pco
 print('--------------------------------------------------------------------------\n')
 
 # Some basics plot
-time_plot(regione['data'], regione['totale_casi'] )
+time_plot(regione['data'], regione['totale_casi'])
 
