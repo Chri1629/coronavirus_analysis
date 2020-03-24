@@ -62,17 +62,22 @@ def loss_plotter(history):
     plt.show()
     fig.savefig(args.output+ '/loss_plot.pdf', bbox_inches='tight')
 # Definition of interpolation function
-def func(x, a, b, c):
+def esponenziale(x, a, b, c):
     return a * np.exp(b * x) + c
 
-def func2(x, a, b):
+def retta(x, a, b):
     return a * x + b
+
+def logistica(x, a, b):
+    return 1/(1 + np.exp(a * x)) + b
 
 def time_plot(time, data): 
     fig, ax = plt.subplots()
     plt.plot(time, data, 'ko', label="Original Data")
-    plt.plot(time, func(x, *popt), 'r-', label="Fitted Exponential")
-    plt.plot(time, predictions, 'r', color= 'blue', label="Fitted Line")
+    plt.plot(time, esponenziale(x, *popt), 'r-', label="Esponenziale")
+    plt.plot(time, retta(x, *popt2), '+-', color = "blue", label="Retta")
+    plt.plot(time, logistica(x, *popt3), '-', color = "green", label="Logistica")
+    #plt.plot(time, predictions, 'r', color= 'blue', label="Fitted Line")
     plt.xticks(rotation = 45, fontsize=8)
     plt.legend()
     plt.show()
@@ -95,30 +100,36 @@ pd.plotting.register_matplotlib_converters()
 x = np.linspace(0, len(regione['data']), len(regione['data']))
 
 
-y = func(x, 2.5, 1.3, 0.5)
-y2 = func2(x,  0,2)
+y = esponenziale(x, 2.5, 1.3, 0.5)
+y2 = retta(x,  0, 2)
+y3 = logistica(x, 10 ,2)
 
-popt, pcov = curve_fit(func, x, regione['totale_casi'])
-popt2, pcov2 = curve_fit(func2, x, regione['totale_casi'])
+popt, pcov = curve_fit(esponenziale, x, regione['totale_casi'])
+popt2, pcov2 = curve_fit(retta, x, regione['totale_casi'])
+popt3, pcov3 = curve_fit(logistica, x, regione['totale_casi'])
 print('--------------------------------------------------------------------------\n')
 print('I parametri stimati dai minimi quadrati per la funzione esponenziale sono: ',popt, '\n')
 print('--------------------------------------------------------------------------\n')
 print('I parametri stimati dai minimi quadrati per la retta sono: ',popt2, '\n')
 print('--------------------------------------------------------------------------\n')
+print('I parametri stimati dai minimi quadrati per la rlogistica sono: ',popt3, '\n')
+print('--------------------------------------------------------------------------\n')
 print("La matrice delle covarianze dei parametri stimati dall'esponenziale sono: ",pcov, '\n')
 print('--------------------------------------------------------------------------\n')
 print('La matrice delle covarianze dei parametri stimati dalla retta sono: ',pcov2, '\n')
 print('--------------------------------------------------------------------------\n')
+print('La matrice delle covarianze dei parametri stimati dalla retta sono: ',pcov3, '\n')
+print('--------------------------------------------------------------------------\n')
 
-
+time_plot(regione['data'], regione['totale_casi'])
 
 # MACHINE LEARNING
-
+'''
 # Initializing parameters
 decay_rate = 0
 learning_rate = 1e-3
 epoch = 100
-patience = "0.001:50"
+patience = "0.001:5"
 initial_epochs = 0
 batch_size = 5
 print("starting the analysis with the following parameters: \n learning rate:", f'{learning_rate}' "\n",
@@ -187,5 +198,6 @@ predictions = np.concatenate(predictions)
 
 # Some basics plot
 predictions = np.concatenate((y_train, y_validation, predictions), axis=None)
-time_plot(regione['data'], regione['totale_casi'])
+
 loss_plotter(history)
+'''
