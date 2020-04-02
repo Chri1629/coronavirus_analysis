@@ -1,4 +1,4 @@
-,data,stato,codice_regione,lat,long,ricoverati_con_sintomi,terapia_intensiva,totale_ospedalizzati,isolamento_domiciliare,totale_positivi,variazione_totale_positivi,nuovi_positivi,dimessi_guariti,deceduti,totale_casi,tamponi,note_it,note_en,regione,abitanti
+,data,stato,codice_regione,lat,long,ricoverati_con_sintomi,terapia_intensiva,totale_ospedalizzati,isolamento_domiciliare,totale_positivi,variazione_totale_positivi,nuovi_positivi,dimessi_guariti,deceduti,totale_casi,tamponi,note_it,note_en,regione,abitanti_regione
 0,2020-02-24T18:00:00,ITA,13,42.35122196,13.39843823,0,0,0,0,0,0,0,0,0,0,5,,,Abruzzo,1322247
 1,2020-02-25T18:00:00,ITA,13,42.35122196,13.39843823,0,0,0,0,0,0,0,0,0,0,5,,,Abruzzo,1322247
 2,2020-02-26T18:00:00,ITA,13,42.35122196,13.39843823,0,0,0,0,0,0,0,0,0,0,13,,,Abruzzo,1322247
