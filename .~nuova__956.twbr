@@ -1,0 +1,3652 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20201.20.0219.0753                               -->
+<workbook source-build='2020.1.0 (20201.20.0219.0753)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <CascadingFilters />
+    <ISO8601PeriodTypes />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <_.fcp.MarkAnimation.true...style-rule element='animation'>
+      <format attr='animation-on' value='ao-off' />
+    </_.fcp.MarkAnimation.true...style-rule>
+  </style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Lockdown' datatype='datetime' name='[Parametro 1]' param-domain-type='any' role='measure' type='quantitative' value='#2020-03-09 18:00:00#'>
+        <calculation class='tableau' formula='#2020-03-09 18:00:00#' />
+      </column>
+    </datasource>
+    <datasource caption='Foglio1!dati (dati_tableau)' inline='true' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='dati_tableau' name='excel-direct.0t9z9tz1pchqqs1dfy2z11nk4obt'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='/Users/christianuccheddu/Desktop/progetti/coronavirus_analysis/data/dati_tableau.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='dati' name='textscan.0wrym08000bnnw17v4zz60zpiuhx'>
+            <connection class='textscan' directory='/Users/christianuccheddu/Desktop/progetti/coronavirus_analysis/data' filename='dati.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0wrym08000bnnw17v4zz60zpiuhx' name='dati.csv' table='[dati#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='it_IT' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='datetime' name='data' ordinal='1' />
+            <column datatype='string' name='stato' ordinal='2' />
+            <column datatype='integer' name='codice_regione' ordinal='3' />
+            <column datatype='string' name='lat' ordinal='4' />
+            <column datatype='string' name='long' ordinal='5' />
+            <column datatype='integer' name='ricoverati_con_sintomi' ordinal='6' />
+            <column datatype='integer' name='terapia_intensiva' ordinal='7' />
+            <column datatype='integer' name='totale_ospedalizzati' ordinal='8' />
+            <column datatype='integer' name='isolamento_domiciliare' ordinal='9' />
+            <column datatype='integer' name='totale_positivi' ordinal='10' />
+            <column datatype='integer' name='variazione_totale_positivi' ordinal='11' />
+            <column datatype='integer' name='nuovi_positivi' ordinal='12' />
+            <column datatype='integer' name='dimessi_guariti' ordinal='13' />
+            <column datatype='integer' name='deceduti' ordinal='14' />
+            <column datatype='integer' name='totale_casi' ordinal='15' />
+            <column datatype='integer' name='tamponi' ordinal='16' />
+            <column datatype='string' name='regione' ordinal='17' />
+            <column datatype='integer' name='abitanti_regione' ordinal='18' />
+            <column datatype='integer' name='posti_letto' ordinal='19' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;it&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;it_IT&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>data</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[data]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>data</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stato</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[stato]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>stato</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LIT_RIT' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>codice_regione</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[codice_regione]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>codice_regione</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lat</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[lat]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>lat</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LIT_RIT' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>long</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[long]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>long</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LIT_RIT' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ricoverati_con_sintomi</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ricoverati_con_sintomi]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>ricoverati_con_sintomi</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>terapia_intensiva</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[terapia_intensiva]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>terapia_intensiva</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>totale_ospedalizzati</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[totale_ospedalizzati]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>totale_ospedalizzati</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isolamento_domiciliare</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[isolamento_domiciliare]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>isolamento_domiciliare</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>totale_positivi</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[totale_positivi]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>totale_positivi</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>variazione_totale_positivi</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[variazione_totale_positivi]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>variazione_totale_positivi</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nuovi_positivi</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[nuovi_positivi]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>nuovi_positivi</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dimessi_guariti</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[dimessi_guariti]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>dimessi_guariti</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>deceduti</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[deceduti]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>deceduti</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>totale_casi</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[totale_casi]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>totale_casi</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tamponi</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tamponi]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>tamponi</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>regione</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[regione]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>regione</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LIT_RIT' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>abitanti_regione</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[abitanti_regione]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>abitanti_regione</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>posti_letto</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[posti_letto]</local-name>
+            <parent-name>[dati.csv]</parent-name>
+            <remote-alias>posti_letto</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='SUM([Totale Positivi]/[Tamponi])' datatype='real' name='[Calculation_128915575301554176]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([totale_positivi]/[tamponi])' />
+      </column>
+      <column caption='data_oggi' datatype='date' name='[Calculation_284289763545985029]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='date(TODAY())' />
+      </column>
+      <column caption='post_letto_today' datatype='integer' name='[Calculation_356628832583712768]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum(IF ([data] == #2020-04-04 17:00#) then [posti_letto] END)' />
+      </column>
+      <column caption='last_casi' datatype='integer' name='[Calculation_709316977669185541]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([totale_casi])' />
+      </column>
+      <column caption='post_letto_perc' datatype='real' name='[Calculation_75646436946989056 1]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(SUM([totale_ospedalizzati])/MAX([posti_letto]))*100' />
+      </column>
+      <column caption='mortalità' datatype='real' default-format='p0.00%' name='[Calculation_75646436946989056]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='(SUM([deceduti])/SUM([totale_casi]))' />
+      </column>
+      <column aggregation='Sum' caption='Deceduti_dim' datatype='integer' name='[Deceduti (copia)_740842176147214337]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[deceduti]' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+      <column caption='Deceduti' datatype='integer' name='[deceduti]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='dimessi_guariti_dim' datatype='integer' name='[dimessi_guariti (copia)_740842176147902466]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[dimessi_guariti]' />
+      </column>
+      <column datatype='integer' name='[dimessi_guariti]' role='measure' type='quantitative' />
+      <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Totale Casi' datatype='integer' name='[totale_casi]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='totale_positivi_dim' datatype='integer' name='[totale_positivi (copia)_740842176148910084]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[totale_positivi]' />
+      </column>
+      <column-instance column='[deceduti]' derivation='Max' name='[max:deceduti:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Deceduti (copia)_740842176147214337]' derivation='None' name='[none:Deceduti (copia)_740842176147214337:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+      <column-instance column='[deceduti]' derivation='Sum' name='[sum:deceduti:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[dimessi_guariti]' derivation='Sum' name='[sum:dimessi_guariti:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[totale_casi]' derivation='Sum' name='[sum:totale_casi:qk]' pivot='key' type='quantitative' />
+      <drill-paths>
+        <drill-path name='Stato'>
+          <field>[regione]</field>
+        </drill-path>
+        <drill-path name='sticazzi'>
+          <field>[totale_positivi (copia)_740842176148910084]</field>
+          <field>[dimessi_guariti (copia)_740842176147902466]</field>
+          <field>[Deceduti (copia)_740842176147214337]</field>
+        </drill-path>
+      </drill-paths>
+      <layout dim-ordering='alphabetic' dim-percentage='0.447602' measure-ordering='alphabetic' measure-percentage='0.511545' parameter-percentage='0.0408526' show-structure='true' user-set-layout='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[max:deceduti:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:deceduti:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:dimessi_guariti:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:totale_casi:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Deceduti (copia)_740842176147214337:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>20</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>21</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>55</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>74</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>93</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>125</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>169</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>216</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>310</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>397</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>572</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>1077</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>3095</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>0</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>41</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>64</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>81</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>115</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>150</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>193</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>268</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>362</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>503</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>854</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>1732</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>7960</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>16</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>45</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>47</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>86</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>119</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>158</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>203</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>287</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>377</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>542</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>966</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>1977</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>28</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>54</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>63</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>101</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>134</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>177</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>238</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>325</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>449</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>617</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>1218</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>4474</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>22</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>23</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>56</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>94</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>129</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>171</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>219</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>313</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>413</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>574</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>1128</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>3456</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>17</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>48</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>71</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>87</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>122</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>162</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>209</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>289</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>386</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>556</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>983</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>2051</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>37</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>39</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>60</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>76</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>111</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>146</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>189</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>258</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>356</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>488</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>749</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>1640</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>7199</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>42</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>82</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>116</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>152</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>198</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>280</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>364</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>519</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>886</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>1811</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>8311</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>32</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>33</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>58</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>72</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>109</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>144</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>185</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>253</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>343</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>468</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>715</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>1443</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>6360</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>18</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>49</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>88</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>123</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>164</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>212</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>290</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>392</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>557</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>985</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>2168</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>25</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>29</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>65</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>102</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>135</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>181</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>240</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>331</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>452</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>631</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>1267</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>4861</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>14</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>30</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>69</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>106</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>136</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>182</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>241</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>333</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>458</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>640</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>1344</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>5402</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>34</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>36</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>73</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>110</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>145</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>186</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>254</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>346</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>477</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>744</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>1538</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>6818</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>38</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>40</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>80</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>113</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>148</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>192</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>267</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>358</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>499</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>816</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>1644</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>7593</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>26</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>52</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>57</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>95</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>131</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>173</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>221</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>315</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>417</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>599</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>1168</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>3776</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>19</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>50</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>91</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>124</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>167</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>215</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>307</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>393</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>569</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>1043</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>2549</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>43</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>68</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>83</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>117</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>153</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>199</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>283</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>374</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>531</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>890</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>1902</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>8656</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>15</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>31</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>70</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>107</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>142</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>184</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>244</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>336</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>460</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>684</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>1420</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>5944</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>24</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>27</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>53</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>59</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>98</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>133</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>175</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>231</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>316</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>428</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>607</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>1174</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>4178</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>13</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>44</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>46</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>85</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>118</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>154</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>201</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>284</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>375</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>532</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>892</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>1959</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>8905</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:regione:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Lombardia&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Abruzzo&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Emilia-Romagna&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Puglia&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Marche&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Friuli Venezia Giulia&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Valle d&apos;Aosta&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Basilicata&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Trentino Alto Adige&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Lazio&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Sardegna&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Sicilia&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Umbria&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Veneto&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Molise&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Liguria&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Calabria&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Toscana&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Piemonte&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Campania&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Italy&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Effettivo&quot;</bucket>
+            <bucket>&quot;Stima&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Foglio 18'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column caption='Deceduti' datatype='integer' name='[deceduti]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[dimessi_guariti]' role='measure' type='quantitative' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column-instance column='[totale_positivi (copia)_740842176148910084]' derivation='None' name='[none:totale_positivi (copia)_740842176148910084:ok]' pivot='key' type='ordinal' />
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[deceduti]' derivation='Sum' name='[sum:deceduti:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[dimessi_guariti]' derivation='Sum' name='[sum:dimessi_guariti:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[totale_positivi]' derivation='Sum' name='[sum:totale_positivi:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='totale_positivi_dim' datatype='integer' name='[totale_positivi (copia)_740842176148910084]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[totale_positivi]' />
+            </column>
+            <column datatype='integer' name='[totale_positivi]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' included-values='in-range'>
+            <min>#2020-04-05 00:00:00#</min>
+            <max>#2020-04-05 23:59:59#</max>
+          </filter>
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:dimessi_guariti:qk]' included-values='in-range'>
+            <min>1</min>
+            <max>176989</max>
+          </filter>
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:dimessi_guariti:qk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' />
+            </encodings>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:dimessi_guariti:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' />
+            </encodings>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:deceduti:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' />
+            </encodings>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:totale_positivi:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:dimessi_guariti:qk] + ([federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:deceduti:qk] + [federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:totale_positivi:qk]))</rows>
+        <cols>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:totale_positivi (copia)_740842176148910084:ok]</cols>
+      </table>
+      <simple-id uuid='{A75D0E61-BDB0-4CC4-81FD-1994311139A5}' />
+    </worksheet>
+    <worksheet name='casi_reg'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff'>CASI </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[totale_casi]' derivation='Sum' name='[sum:totale_casi:qk]' pivot='key' type='quantitative' />
+            <column caption='Totale Casi' datatype='integer' name='[totale_casi]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='3' first-period='-1' include-future='true' include-null='false' last-period='-1' period-type-v2='day' />
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='font-family' value='Geneva' />
+            <format attr='font-size' value='15' />
+            <format attr='color' value='#ffffff' />
+            <format attr='font-weight' value='normal' />
+            <format attr='text-decoration' value='underline' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' scope='rows' value='Geneva' />
+            <format attr='font-family' scope='cols' value='Geneva' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='font-family' value='Geneva' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:totale_casi:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>posti_letto:&#9;</run>
+                <run bold='true'>Æ </run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>last_casi:&#9;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{33CF040E-1B27-4FB0-865B-442D4361145A}' />
+    </worksheet>
+    <worksheet name='casi_totale'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>TOTALE CASI </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='last_casi' datatype='integer' name='[Calculation_709316977669185541]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([totale_casi])' />
+            </column>
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column caption='Totale Casi' datatype='integer' name='[totale_casi]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_709316977669185541]' derivation='User' name='[usr:Calculation_709316977669185541:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='6' first-period='-1' include-future='true' include-null='false' last-period='-1' period-type-v2='day' />
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-family' value='Geneva' />
+            <format attr='color' value='#002fff' />
+            <format attr='font-size' value='15' />
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='vertical-align' value='center' />
+            <format attr='vertical-align' scope='cols' value='auto' />
+            <format attr='vertical-align' scope='rows' value='auto' />
+            <format attr='text-align' value='auto' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_709316977669185541:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{90088D53-035A-4D3C-8A8F-F871BEC2EEEE}' />
+    </worksheet>
+    <worksheet name='data'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000'>STATISTICHE REGIONALI DALL&apos;INIZIO DELLA PANDEMIA CON PERCENTUALI SUL TOTALE AGGIORNATO AL &lt;</run>
+            <run bold='true' fontalignment='1' fontcolor='#000000'>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:Calculation_284289763545985029:qk]</run>
+            <run bold='true' fontalignment='1' fontcolor='#000000'>&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='data_oggi' datatype='date' name='[Calculation_284289763545985029]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='date(TODAY())' />
+            </column>
+            <column-instance column='[Calculation_284289763545985029]' derivation='None' name='[none:Calculation_284289763545985029:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' data-class='subtotal' scope='rows' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:Calculation_284289763545985029:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2FA86289-F961-44C2-9AD7-CE6B11511239}' />
+    </worksheet>
+    <worksheet name='deced_regi'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='SUM([Deceduti]/[abitanti_regione]*10000)' datatype='real' name='[Calculation_709316977644773379]' role='measure' type='quantitative' user:unnamed='Foglio 3'>
+              <calculation class='tableau' formula='SUM([deceduti]/[abitanti_regione]*10000) ' />
+            </column>
+            <column datatype='integer' name='[abitanti_regione]' role='measure' type='quantitative' />
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column caption='Deceduti' datatype='integer' name='[deceduti]' role='measure' type='quantitative' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[totale_casi]' derivation='Sum' name='[sum:totale_casi:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[data]' derivation='Day-Trunc' name='[tdy:data:qk]' pivot='key' type='quantitative' />
+            <column caption='Totale Casi' datatype='integer' name='[totale_casi]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_709316977644773379]' derivation='User' name='[usr:Calculation_709316977644773379:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='3' first-period='-1' include-future='true' include-null='false' last-period='-1' period-type-v2='day' />
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-family' value='Geneva' />
+            <format attr='font-size' value='15' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' />
+              <lod column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:totale_casi:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_709316977644773379:qk]</rows>
+        <cols>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]</cols>
+      </table>
+      <simple-id uuid='{E99F44C0-EE05-4930-AB54-0B679621780C}' />
+    </worksheet>
+    <worksheet name='deced_tot'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff'>DECEDUTI</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column caption='Deceduti' datatype='integer' name='[deceduti]' role='measure' type='quantitative' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[deceduti]' derivation='Sum' name='[sum:deceduti:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='6' first-period='-1' include-future='true' include-null='false' last-period='-1' period-type-v2='day' />
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='19' />
+            <format attr='text-align' value='center' />
+            <format attr='font-family' value='Geneva' />
+            <format attr='font-size' value='15' />
+            <format attr='vertical-align' data-class='subtotal' value='center' />
+            <format attr='color' value='#ffffff' />
+            <format attr='text-decoration' value='underline' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='vertical-align' value='center' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:deceduti:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{D9AE3A30-452D-4EA8-A0C3-C59BBB5BA230}' />
+    </worksheet>
+    <worksheet name='guariti_tot'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff'>GUARITI</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[dimessi_guariti]' role='measure' type='quantitative' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[dimessi_guariti]' derivation='Sum' name='[sum:dimessi_guariti:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='6' first-period='-1' include-future='true' include-null='false' last-period='-1' period-type-v2='day' />
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+            <format attr='font-family' value='Geneva' />
+            <format attr='font-size' value='15' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:dimessi_guariti:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3C20D4D1-A93C-4EAB-AA46-B66840B483C2}' />
+    </worksheet>
+    <worksheet name='inc_perc'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff'>PERCENTUALE AUMENTO CASI</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column-instance column='[totale_casi]' derivation='Sum' name='[pcdf:sum:totale_casi:qk:1]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]' ordering-type='Field' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[data]' derivation='Day-Trunc' name='[tdy:data:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[data]' derivation='Day-Trunc' name='[tdy:data:qk]' pivot='key' type='quantitative' />
+            <column caption='Totale Casi' datatype='integer' name='[totale_casi]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' first-period='-2' include-future='true' include-null='false' last-period='0' period-type-v2='day' />
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:ok]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[tdy:data:ok]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[tdy:data:ok]' member='#2020-04-01 00:00:00#' />
+                <groupfilter function='member' level='[tdy:data:ok]' member='#2020-04-02 00:00:00#' />
+                <groupfilter function='member' level='[tdy:data:ok]' member='#2020-04-03 00:00:00#' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='27' />
+            <format attr='width' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:ok]' value='211' />
+            <format attr='text-align' value='center' />
+            <format attr='font-family' value='Geneva' />
+            <format attr='font-size' value='15' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:ok]' value='false' />
+            <format attr='text-align' scope='cols' value='center' />
+            <format attr='text-align' scope='rows' value='center' />
+            <format attr='font-family' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:ok]' value='Geneva' />
+            <format attr='font-size' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:ok]' value='12' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='stroke-size' id='refline0' value='3' />
+            <format attr='stroke-color' id='refline0' value='#75a1c7' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[pcdf:sum:totale_casi:qk:1]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:ok]</cols>
+      </table>
+      <simple-id uuid='{0AE9DFE8-3739-467A-96D7-1E26989A40A3}' />
+    </worksheet>
+    <worksheet name='isolam_reg'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff'>ISOLAMENTO DOMICILIARE</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[isolamento_domiciliare]' role='measure' type='quantitative' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[isolamento_domiciliare]' derivation='Sum' name='[sum:isolamento_domiciliare:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='3' first-period='-1' include-future='true' include-null='false' last-period='-1' period-type-v2='day' />
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='24' />
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+            <format attr='font-family' value='Geneva' />
+            <format attr='font-size' value='15' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='wrap' data-class='subtotal' value='auto' />
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+            <format attr='wrap' value='off' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='0' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:isolamento_domiciliare:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C47647F3-DCFC-4EE1-9CC2-ADC71B2929F4}' />
+    </worksheet>
+    <worksheet name='line_region'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+            <datasource caption='Parametri' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Lockdown' datatype='datetime' name='[Parametro 1]' param-domain-type='any' role='measure' type='quantitative' value='#2020-03-09 18:00:00#'>
+              <calculation class='tableau' formula='#2020-03-09 18:00:00#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='SUM([Totale Casi]/[abitanti_regione]*10000)' datatype='real' name='[Calculation_709316977644580866]' role='measure' type='quantitative' user:unnamed='Foglio 1'>
+              <calculation class='tableau' formula='SUM([totale_casi]/[abitanti_regione]*10000)' />
+            </column>
+            <column datatype='integer' name='[abitanti_regione]' role='measure' type='quantitative' />
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[data]' derivation='Day-Trunc' name='[tdy:data:qk]' pivot='key' type='quantitative' />
+            <column caption='Totale Casi' datatype='integer' name='[totale_casi]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_709316977644580866]' derivation='User' name='[usr:Calculation_709316977644580866:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='4' included-values='in-range'>
+            <min>#2020-02-24 18:00:00#</min>
+            <max>#2020-04-05 23:59:59#</max>
+          </filter>
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='auto-subtitle' class='0' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]' scope='cols' value='false' />
+            <format attr='title' class='0' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]' scope='cols' value='Data' />
+            <format attr='title' class='0' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_709316977644580866:qk]' scope='rows' value='Casi per 10000 abitanti' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]' value='Geneva' />
+            <format attr='font-size' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]' value='8' />
+            <format attr='font-family' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_709316977644580866:qk]' value='Geneva' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dotted' />
+            <format attr='stroke-color' id='refline0' value='#f28e2b' />
+            <format attr='stroke-size' id='refline0' value='4' />
+            <format attr='fill-below' id='refline0' value='#e6e6e6' />
+            <format attr='fill-above' id='refline0' value='#e6e6e6' />
+            <format attr='background-color' id='refline0' value='#e6e6e67f' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <reference-line axis-column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]' enable-instant-analytics='true' formula='min' id='refline0' label-type='automatic' scope='per-pane' value-column='[Parameters].[Parametro 1]' z-order='1' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Giorno:&#9;</run>
+                <run bold='true'>&lt;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Casi per 10000 abitanti:&#9;</run>
+                <run bold='true'>&lt;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_709316977644580866:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#5f6bff' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_709316977644580866:qk]</rows>
+        <cols>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]</cols>
+      </table>
+      <simple-id uuid='{F3933D88-8B8F-4BEE-9C23-2718BA4200F4}' />
+    </worksheet>
+    <worksheet name='map'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='MAX([Totale Casi]*10000/[abitanti_regione])' datatype='real' name='[Calculation_709316977644830724]' role='measure' type='quantitative' user:unnamed='Foglio 4'>
+              <calculation class='tableau' formula='MAX([totale_casi]*10000/[abitanti_regione])' />
+            </column>
+            <column datatype='integer' name='[abitanti_regione]' role='measure' type='quantitative' />
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column-instance column='[totale_casi]' derivation='Max' name='[max:totale_casi:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='Totale Casi' datatype='integer' name='[totale_casi]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_709316977644830724]' derivation='User' name='[usr:Calculation_709316977644830724:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='6' first-period='-1' include-future='true' include-null='false' last-period='-1' period-type-v2='day' />
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[Longitude (generated)]' field-type='quantitative' max='2397854.8889522897' min='394037.85137987847' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[Latitude (generated)]' field-type='quantitative' max='6297587.8698257692' min='3718572.2675538356' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[max:totale_casi:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-diverging'>
+                <color>#ff0000</color>
+                <color>#fb1616</color>
+                <color>#f82d2d</color>
+                <color>#f44242</color>
+                <color>#f15757</color>
+                <color>#ed6c6c</color>
+                <color>#ea7f7f</color>
+                <color>#e69292</color>
+                <color>#e3a5a5</color>
+                <color>#dfb7b7</color>
+                <color>#dcc8c8</color>
+                <color>#d9d9d9</color>
+                <color>#9dcbe4</color>
+                <color>#8ec2df</color>
+                <color>#80b6d9</color>
+                <color>#73a8d0</color>
+                <color>#669bc7</color>
+                <color>#5c91bf</color>
+                <color>#5385b2</color>
+                <color>#487aa9</color>
+                <color>#3b6ea0</color>
+                <color>#306495</color>
+                <color>#2b5c8a</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' center='35.0' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_709316977644830724:qk]' num-steps='12' palette='sunrise_sunset_diverging_10_0' symmetric='false' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_709316977644830724:qk]' value='Totale casi su 10000 abitanti' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='b01002_001e' value='false' />
+            <format attr='enabled' id='b01002_002e' value='false' />
+            <format attr='enabled' id='b01002_003e' value='false' />
+            <format attr='enabled' id='dp02_0001e' value='false' />
+            <format attr='enabled' id='dp02_0015e' value='false' />
+            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
+            <format attr='enabled' id='dp03_0028e' value='false' />
+            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
+            <format attr='enabled' id='dp03_0062e' value='false' />
+            <format attr='enabled' id='dp03_0088e' value='false' />
+            <format attr='enabled' id='dp04_0001e' value='false' />
+            <format attr='enabled' id='dp04_0046e' value='false' />
+            <format attr='enabled' id='dp04_0047e' value='false' />
+            <format attr='enabled' id='dp04_0089e' value='false' />
+            <format attr='enabled' id='dp05_0001e' value='false' />
+            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
+            <format attr='enabled' id='dp05_0032e' value='false' />
+            <format attr='enabled' id='dp05_0033e' value='false' />
+            <format attr='enabled' id='dp05_0034e' value='false' />
+            <format attr='enabled' id='dp05_0039e' value='false' />
+            <format attr='enabled' id='dp05_0047e' value='false' />
+            <format attr='enabled' id='dp05_0053e' value='false' />
+            <format attr='enabled' id='dp05_0066e' value='false' />
+            <format attr='enabled' id='dp05_0077e' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='normal' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+            <format attr='geo-area-type' value='State' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_709316977644830724:qk]' />
+              <lod column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' />
+              <lod column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[max:totale_casi:qk]' />
+              <geometry column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[Geometry (generated)]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Regione:&#9;</run>
+                <run bold='true'>&lt;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Totale Casi:&#9;</run>
+                <run bold='true'>&lt;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[max:totale_casi:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Numero di casi per 10000 abitanti:&#9;</run>
+                <run bold='true'>&lt;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_709316977644830724:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[Latitude (generated)]</rows>
+        <cols>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{E16F7C45-FE4A-451C-BD4F-47CB25487029}' />
+    </worksheet>
+    <worksheet name='mortalità'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff'>MORTALITA&apos; </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='mortalità' datatype='real' default-format='p0.00%' name='[Calculation_75646436946989056]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(SUM([deceduti])/SUM([totale_casi]))' />
+            </column>
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column caption='Deceduti' datatype='integer' name='[deceduti]' role='measure' type='quantitative' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='Totale Casi' datatype='integer' name='[totale_casi]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_75646436946989056]' derivation='User' name='[usr:Calculation_75646436946989056:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='3' first-period='-1' include-future='true' include-null='false' last-period='-1' period-type-v2='day' />
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='font-family' value='Geneva' />
+            <format attr='font-size' value='15' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' scope='rows' value='Geneva' />
+            <format attr='font-family' scope='cols' value='Geneva' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='font-family' value='Geneva' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_75646436946989056:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2AE1BF4B-3150-46DB-A8CC-523B4F4C4483}' />
+    </worksheet>
+    <worksheet name='osp_reg'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff'>OSPEDALIZZATI</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[totale_ospedalizzati]' derivation='Sum' name='[sum:totale_ospedalizzati:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[totale_ospedalizzati]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='3' first-period='-1' include-future='true' include-null='false' last-period='-1' period-type-v2='day' />
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='font-family' value='Geneva' />
+            <format attr='font-size' value='15' />
+            <format attr='color' value='#ffffff' />
+            <format attr='font-weight' value='normal' />
+            <format attr='text-decoration' value='underline' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' scope='rows' value='Geneva' />
+            <format attr='font-family' scope='cols' value='Geneva' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='font-family' value='Geneva' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:totale_ospedalizzati:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>posti_letto:&#9;</run>
+                <run bold='true'>Æ </run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>last_casi:&#9;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B376B636-FB77-487C-A78B-1758E555DA20}' />
+    </worksheet>
+    <worksheet name='osped_letto'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='post_letto_today' datatype='integer' name='[Calculation_356628832583712768]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='sum(IF ([data] == #2020-04-04 17:00#) then [posti_letto] END)' />
+            </column>
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[posti_letto]' role='measure' type='quantitative' />
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[terapia_intensiva]' derivation='Sum' name='[sum:terapia_intensiva:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[data]' derivation='Day-Trunc' name='[tdy:data:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[terapia_intensiva]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_356628832583712768]' derivation='User' name='[usr:Calculation_356628832583712768:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' included-values='in-range'>
+            <min>#2020-02-24 18:00:00#</min>
+            <max>#2020-04-05 17:00:00#</max>
+          </filter>
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='fill-above' id='refline1' value='#00000000' />
+            <format attr='fill-below' id='refline1' value='#00000000' />
+            <format attr='fill-above' id='refline2' value='#00000000' />
+            <format attr='fill-below' id='refline2' value='#00000000' />
+            <format attr='fill-above' id='refline3' value='#00000000' />
+            <format attr='fill-below' id='refline3' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_356628832583712768:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:terapia_intensiva:qk]' enable-instant-analytics='true' formula='sum' id='refline0' label-type='automatic' scope='per-pane' value-column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_356628832583712768:qk]' z-order='1' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Giorno di Data:&#9;</run>
+                <run bold='true'>&lt;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>terapia_intensiva:&#9;</run>
+                <run bold='true'>&lt;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:terapia_intensiva:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:terapia_intensiva:qk]</rows>
+        <cols>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]</cols>
+      </table>
+      <simple-id uuid='{83D1BEF2-1ED4-4486-941E-D8FC24005450}' />
+    </worksheet>
+    <worksheet name='perc_osp'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff'>MORTALITA&apos; </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='post_letto_perc' datatype='real' name='[Calculation_75646436946989056 1]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='(SUM([totale_ospedalizzati])/MAX([posti_letto]))*100' />
+            </column>
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column datatype='integer' name='[posti_letto]' role='measure' type='quantitative' />
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column datatype='integer' name='[totale_ospedalizzati]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_75646436946989056 1]' derivation='User' name='[usr:Calculation_75646436946989056 1:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='3' first-period='-1' include-future='true' include-null='false' last-period='-1' period-type-v2='day' />
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='font-family' value='Geneva' />
+            <format attr='font-size' value='15' />
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' scope='rows' value='Geneva' />
+            <format attr='font-family' scope='cols' value='Geneva' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='font-family' value='Geneva' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_75646436946989056 1:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E55C9BAB-2A76-4F31-BC5A-4E20FB547B62}' />
+    </worksheet>
+    <worksheet name='perc_totCasi'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+            <datasource caption='Parametri' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Lockdown' datatype='datetime' name='[Parametro 1]' param-domain-type='any' role='measure' type='quantitative' value='#2020-03-09 18:00:00#'>
+              <calculation class='tableau' formula='#2020-03-09 18:00:00#' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column-instance column='[totale_casi]' derivation='Sum' name='[pcdf:sum:totale_casi:qk]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-type='Rows' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[data]' derivation='Day-Trunc' name='[tdy:data:qk]' pivot='key' type='quantitative' />
+            <column caption='Totale Casi' datatype='integer' name='[totale_casi]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='4' included-values='in-range'>
+            <min>#2020-02-24 18:00:00#</min>
+            <max>#2020-04-05 23:59:59#</max>
+          </filter>
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[pcdf:sum:totale_casi:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[pcdf:sum:totale_casi:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]' scope='cols' value='Data' />
+            <format attr='title' class='0' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[pcdf:sum:totale_casi:qk]' scope='rows' value='Aumento casi in percentuale' />
+            <format attr='auto-subtitle' class='0' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[pcdf:sum:totale_casi:qk]' value='Geneva' />
+            <format attr='font-size' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[pcdf:sum:totale_casi:qk]' value='8' />
+            <format attr='font-family' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]' value='Geneva' />
+            <format attr='font-size' field='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]' value='8' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+            <format attr='stroke-size' id='refline0' value='3' />
+            <format attr='stroke-color' id='refline0' value='#4e79a7' />
+            <format attr='background-color' id='refline0' value='#e6e6e67f' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <reference-line axis-column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]' enable-instant-analytics='true' formula='min' id='refline0' label='lockdown' label-type='custom' scope='per-pane' value-column='[Parameters].[Parametro 1]' z-order='1' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Giorno:&#9;</run>
+                <run bold='true'>&lt;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Differenza in percentuale dei casi rispetto al giorno precedente:&#9;</run>
+                <run bold='true'>&lt;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[pcdf:sum:totale_casi:qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#e47a00' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[pcdf:sum:totale_casi:qk]</rows>
+        <cols>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:qk]</cols>
+      </table>
+      <simple-id uuid='{9FBC406B-A62D-4E74-AE83-5F208BB81B57}' />
+    </worksheet>
+    <worksheet name='tamp_tot'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff'>TAMPONI</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[tamponi]' derivation='Sum' name='[sum:tamponi:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[tamponi]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='6' first-period='-1' include-future='true' include-null='false' last-period='-1' period-type-v2='day' />
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='font-size' value='15' />
+            <format attr='font-family' value='Geneva' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:tamponi:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{14434673-ED3C-418B-B35D-C6028B48CB28}' />
+    </worksheet>
+    <worksheet name='terapia_reg'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffffff'>TERAPIA INTENSIVA</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+            <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+            <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+            <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[terapia_intensiva]' derivation='Sum' name='[sum:terapia_intensiva:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[terapia_intensiva]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='3' first-period='-1' include-future='true' include-null='false' last-period='-1' period-type-v2='day' />
+          <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
+            <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]</column>
+            <column>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='font-family' value='Geneva' />
+            <format attr='font-size' value='15' />
+            <format attr='color' value='#ffffff' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:terapia_intensiva:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>Æ </run>
+                <run>&lt;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:terapia_intensiva:qk]&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{35C4DA68-C22E-49A0-983A-EAC287E32336}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 2'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#e6e6e6' />
+        </style-rule>
+        <style-rule element='dash-title'>
+          <format attr='font-family' value='Geneva' />
+          <format attr='text-align' value='center' />
+          <format attr='background-color' value='#00000000' />
+          <format attr='border-style' value='solid' />
+          <format attr='border-width' value='1' />
+        </style-rule>
+        <style-rule element='dash-subtitle'>
+          <format attr='font-family' value='Geneva' />
+          <format attr='background-color' value='#00000000' />
+        </style-rule>
+        <style-rule element='dash-text'>
+          <format attr='text-orientation' id='dash-text_48' value='-90' />
+        </style-rule>
+      </style>
+      <size maxheight='1500' maxwidth='1657' minheight='1500' minwidth='1657' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='Foglio1!dati (dati_tableau)' name='federated.1a2ckd108jo6oc16lhh8v14mbtwk' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1a2ckd108jo6oc16lhh8v14mbtwk'>
+        <column caption='Data' datatype='datetime' name='[data]' role='dimension' type='ordinal' />
+        <column-instance column='[data]' derivation='None' name='[none:data:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[regione]' derivation='None' name='[none:regione:nk]' pivot='key' type='nominal' />
+        <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='68333' id='8' param='horz' type='layout-flow' w='87809' x='11708' y='5600'>
+            <zone h='68333' id='6' type='layout-basic' w='75920' x='11708' y='5600'>
+              <zone h='68333' id='4' param='vert' type='layout-flow' w='75920' x='11708' y='5600'>
+                <zone fixed-size='111' h='7400' id='23' is-fixed='true' layout-strategy-id='distribute-evenly' param='horz' type='layout-flow' w='75920' x='11708' y='5600'>
+                  <zone h='7400' id='119' name='isolam_reg' w='19010' x='11708' y='5600'>
+                    <layout-cache cell-count-h='1' non-cell-size-h='40' type-h='cell' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='7400' id='130' name='osp_reg' w='19010' x='30718' y='5600'>
+                    <layout-cache cell-count-h='1' non-cell-size-h='40' type-h='cell' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='7400' id='118' name='terapia_reg' w='18950' x='49728' y='5600'>
+                    <layout-cache cell-count-h='1' non-cell-size-h='40' type-h='cell' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='7400' id='116' name='mortalità' w='18950' x='68678' y='5600'>
+                    <layout-cache cell-count-h='1' non-cell-size-h='40' type-h='cell' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+                <zone fixed-size='1193' h='60933' id='12' is-fixed='true' param='horz' type='layout-flow' w='75920' x='11708' y='13000'>
+                  <zone h='60933' id='18' param='vert' type='layout-flow' w='39257' x='11708' y='13000'>
+                    <zone h='4333' id='14' name='map' pane-specification-id='0' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_709316977644830724:qk]' type='color' w='39257' x='11708' y='13000'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='56600' id='13' name='map' w='39257' x='11708' y='17333'>
+                      <layout-cache minheight='216' minwidth='202' type-h='scalable' type-w='scalable' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                  <zone h='60933' id='27' param='vert' type='layout-flow' w='36662' x='50965' y='13000'>
+                    <zone fixed-size='286' h='19600' id='15' is-fixed='true' name='line_region' w='36662' x='50965' y='13000'>
+                      <layout-cache minheight='164' minwidth='159' type-h='scalable' type-w='scalable' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='41333' id='28' name='perc_totCasi' w='36662' x='50965' y='32600'>
+                      <layout-cache minheight='189' minwidth='159' type-h='scalable' type-w='scalable' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+            <zone fixed-size='197' h='68333' id='7' is-fixed='true' param='vert' type='layout-flow' w='11889' x='87628' y='5600'>
+              <zone h='28733' id='9' mode='checklist' name='line_region' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' type='filter' values='cascading' w='11889' x='87628' y='5600'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='3400' id='125' name='tamp_tot' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' show-domain='false' show-null-ctrls='false' type='filter' w='11889' x='87628' y='34333'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='5067' id='91' param='vert' type='layout-flow' w='99034' x='483' y='533' />
+          <zone h='19416' id='120' param='vert' type='layout-flow' w='11225' x='483' y='54517'>
+            <zone fixed-size='131' h='9266' id='122' is-fixed='true' name='deced_tot' w='11225' x='483' y='54517'>
+              <layout-cache type-h='cell' type-w='fixed' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='10150' id='123' name='inc_perc' w='11225' x='483' y='63783'>
+              <layout-cache cell-count-h='1' non-cell-size-h='67' type-h='cell' type-w='fixed' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='14585' id='117' name='casi_reg' w='11225' x='483' y='24878'>
+            <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='15054' id='121' name='guariti_tot' w='11225' x='483' y='39463'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='19278' id='124' name='tamp_tot' w='11225' x='483' y='5600'>
+            <layout-cache type-h='cell' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='25534' id='126' param='horz' type='layout-flow' w='99034' x='483' y='73933'>
+            <zone h='25534' id='127' name='osped_letto' w='99034' x='483' y='73933'>
+              <layout-cache has-max-size-h='true' maxheight='44' minheight='44' minwidth='166' type-h='scalable' type-w='scalable' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='2533' id='90' name='data' w='84007' x='6699' y='1133'>
+          <layout-cache minheight='115' type-h='scalable' type-w='fixed' />
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2900' minheight='2900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='138' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98934' id='137' param='vert' type='layout-flow' w='99034' x='483' y='533'>
+                <zone fixed-size='38' h='2533' id='90' is-fixed='true' name='data' w='84007' x='6699' y='1133'>
+                  <layout-cache minheight='115' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3400' id='125' name='tamp_tot' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' show-domain='false' show-null-ctrls='false' type='filter' w='11889' x='87628' y='34333'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='19278' id='124' is-fixed='true' name='tamp_tot' w='11225' x='483' y='5600'>
+                  <layout-cache type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='103' h='7400' id='119' is-fixed='true' name='isolam_reg' w='19010' x='11708' y='5600'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='40' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='103' h='7400' id='130' is-fixed='true' name='osp_reg' w='19010' x='30718' y='5600'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='40' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='103' h='7400' id='118' is-fixed='true' name='terapia_reg' w='18950' x='49728' y='5600'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='40' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='103' h='7400' id='116' is-fixed='true' name='mortalità' w='18950' x='68678' y='5600'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='40' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='28733' id='9' mode='checkdropdown' name='line_region' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' type='filter' values='cascading' w='11889' x='87628' y='5600'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='19600' id='15' is-fixed='true' name='line_region' w='36662' x='50965' y='13000'>
+                  <layout-cache minheight='164' minwidth='159' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='56600' id='13' is-fixed='true' name='map' w='39257' x='11708' y='17333'>
+                  <layout-cache minheight='216' minwidth='202' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4333' id='14' name='map' pane-specification-id='0' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_709316977644830724:qk]' type='color' w='39257' x='11708' y='13000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='211' h='14585' id='117' is-fixed='true' name='casi_reg' w='11225' x='483' y='24878'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='41333' id='28' is-fixed='true' name='perc_totCasi' w='36662' x='50965' y='32600'>
+                  <layout-cache minheight='189' minwidth='159' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='218' h='15054' id='121' is-fixed='true' name='guariti_tot' w='11225' x='483' y='39463'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='131' h='9266' id='122' is-fixed='true' name='deced_tot' w='11225' x='483' y='54517'>
+                  <layout-cache type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='144' h='10150' id='123' is-fixed='true' name='inc_perc' w='11225' x='483' y='63783'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='67' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='25534' id='127' is-fixed='true' name='osped_letto' w='99034' x='483' y='73933'>
+                  <layout-cache has-max-size-h='true' maxheight='44' minheight='44' minwidth='166' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{1124BF26-8CA7-4CD4-8523-0509C0E57E44}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='line_region'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{87890D8D-4BAD-4181-A6F1-CC0A453DF577}' />
+    </window>
+    <window class='worksheet' name='perc_totCasi'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='datetime' param='[Parameters].[Parametro 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A857A6D7-3D02-4285-9AB0-D02643B7F2CA}' />
+    </window>
+    <window class='worksheet' name='map'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_709316977644830724:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{B197AC5C-D0BE-4A48-926A-03488BAE8C04}' />
+    </window>
+    <window class='worksheet' name='isolam_reg'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' type='filter' values='cascading' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5313F931-B5DA-4A83-815D-FADA847DBCF8}' />
+    </window>
+    <window class='worksheet' name='terapia_reg'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{409ADBAD-466C-490C-8BF6-E44B273677F9}' />
+    </window>
+    <window class='worksheet' name='deced_regi'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' type='color' />
+            <card param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' type='highlighter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FAEBD262-BD6C-4172-8CBC-07FD4146634C}' />
+    </window>
+    <window class='worksheet' name='perc_osp'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' type='filter' values='cascading' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9A54F86A-8082-4C98-BE78-6FF6A83F2638}' />
+    </window>
+    <window class='worksheet' name='mortalità'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' type='filter' values='cascading' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5042ACE3-33D3-4D55-98EA-BCADD558E5C1}' />
+    </window>
+    <window class='worksheet' name='osp_reg'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' type='filter' values='cascading' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{92F997F3-7C52-4E38-AE63-FAC067D116E1}' />
+    </window>
+    <window class='worksheet' name='casi_reg'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' type='filter' values='cascading' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{32CACB04-3B31-4F74-8E0D-3A1BF8CA6F26}' />
+    </window>
+    <window class='worksheet' name='casi_totale'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0798E878-EF04-4FD7-8192-AC8188FE6F70}' />
+    </window>
+    <window class='worksheet' name='osped_letto'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{773A405D-1B50-4ED4-A0A0-6B005DC84FDC}' />
+    </window>
+    <window class='worksheet' name='data'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <floating-toolbar-visibility value='2' />
+      </viewpoint>
+      <simple-id uuid='{0F7A88F1-757B-4B82-AAF9-30E9E7E4BCB4}' />
+    </window>
+    <window class='worksheet' name='tamp_tot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card mode='checkdropdown' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' type='filter' values='cascading' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C6EE6EE9-FF8D-42C3-B1CB-B7BD11EF144F}' />
+    </window>
+    <window class='worksheet' name='Foglio 18'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:dimessi_guariti:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='3' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E32ED8AB-692A-427A-910E-640A6E9FBEA7}' />
+    </window>
+    <window class='dashboard' name='Dashboard 2'>
+      <viewpoints>
+        <viewpoint name='casi_reg'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='data'>
+          <zoom type='entire-view' />
+          <floating-toolbar-visibility value='1' />
+        </viewpoint>
+        <viewpoint name='deced_tot'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='guariti_tot'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='inc_perc'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='isolam_reg'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='line_region'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='map'>
+          <zoom type='entire-view' />
+          <default-map-tool-selection tool='1' />
+        </viewpoint>
+        <viewpoint name='mortalità'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='osp_reg'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='osped_letto'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='perc_totCasi'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='tamp_tot'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='terapia_reg'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='13' />
+      <simple-id uuid='{46B13594-36E9-4FBD-9B0B-114D82E9CB2E}' />
+    </window>
+    <window class='worksheet' hidden='true' name='deced_tot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' type='filter' values='cascading' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9D5DF064-187A-47F8-8525-F6F050C44756}' />
+    </window>
+    <window class='worksheet' hidden='true' name='guariti_tot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' type='filter' values='cascading' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B7EE8BAA-D131-419B-B5F3-AE9B6ED2D33A}' />
+    </window>
+    <window class='worksheet' hidden='true' name='inc_perc'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{332D7E98-95E2-46A4-B548-72B225DE5830}' />
+    </window>
+  </windows>
+</workbook>
