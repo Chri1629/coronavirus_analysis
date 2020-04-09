@@ -649,50 +649,6 @@
       <layout dim-ordering='alphabetic' dim-percentage='0.298851' measure-ordering='alphabetic' measure-percentage='0.567529' parameter-percentage='0.133621' show-structure='true' user-set-layout='true' />
       <style>
         <style-rule element='mark'>
-          <encoding attr='color' field='[:Measure Names]' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[max:deceduti:qk]&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:isolamento_domiciliare:qk]&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_69453988230889472:qk]&quot;</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_69453988230971394:qk]&quot;</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:dimessi_guariti:qk]&quot;</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:deceduti:qk]&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk]&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:terapia_intensiva:qk]&quot;</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:totale_positivi:qk]&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[max:abitanti_regione:qk]&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:Calculation_69453988231229444:qk]&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:ricoverati_con_sintomi:qk]&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:totale_casi:qk]&quot;</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_69453988231270405:qk]&quot;</bucket>
-            </map>
-          </encoding>
           <encoding attr='color' field='[none:regione:nk]' type='palette'>
             <map to='#499894'>
               <bucket>&quot;Lombardia&quot;</bucket>
@@ -753,6 +709,50 @@
             </map>
             <map to='#ffbe7d'>
               <bucket>&quot;Campania&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[max:deceduti:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:isolamento_domiciliare:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_69453988230889472:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_69453988230971394:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:dimessi_guariti:qk]&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:deceduti:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:terapia_intensiva:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:totale_positivi:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[max:abitanti_regione:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:Calculation_69453988231229444:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:ricoverati_con_sintomi:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:totale_casi:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_69453988231270405:qk]&quot;</bucket>
             </map>
           </encoding>
         </style-rule>
@@ -890,6 +890,9 @@
             <encodings>
               <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:totale_positivi:qk]' />
             </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
@@ -970,12 +973,7 @@
               <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:totale_casi:qk]' />
             </encodings>
             <customized-tooltip>
-              <formatted-text>
-                <run fontcolor='#787878'>posti_letto:&#9;</run>
-                <run bold='true'>Æ </run>
-                <run>Æ&#10;</run>
-                <run fontcolor='#787878'>last_casi:&#9;</run>
-              </formatted-text>
+              <formatted-text />
             </customized-tooltip>
             <style>
               <style-rule element='mark'>
@@ -1060,9 +1058,7 @@
       <layout-options>
         <title>
           <formatted-text>
-            <run bold='true' fontalignment='1' fontcolor='#636366' fontsize='22'>STATISTICHE REGIONALI DALL&apos;INIZIO DELLA PANDEMIA CON PERCENTUALI SUL TOTALE AGGIORNATO AL &lt;</run>
-            <run bold='true' fontalignment='1' fontcolor='#636366' fontsize='22'>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:Calculation_284289763545985029:qk]</run>
-            <run bold='true' fontalignment='1' fontcolor='#636366' fontsize='22'>&gt;</run>
+            <run bold='true' fontalignment='1' fontcolor='#636366' fontsize='22'>STATISTICHE REGIONALI DALL&apos;INIZIO DELLA PANDEMIA CON PERCENTUALI SUL TOTALE AGGIORNATO AL 08/04/2020</run>
           </formatted-text>
         </title>
       </layout-options>
@@ -1184,7 +1180,7 @@
             <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[deceduti]' derivation='Sum' name='[sum:deceduti:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
-          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='4' first-period='0' include-future='true' include-null='false' last-period='0' period-type='day' period-type-v2='day' />
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='4' first-period='0' include-future='true' include-null='false' last-period='0' period-anchor='#2020-04-08 00:00:00#' period-type='day' period-type-v2='day' />
           <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
             <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
@@ -1225,6 +1221,9 @@
             <encodings>
               <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:deceduti:qk]' />
             </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
@@ -1339,7 +1338,7 @@
             <column aggregation='None' caption='Regione' datatype='string' name='[regione]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
             <column-instance column='[dimessi_guariti]' derivation='Sum' name='[sum:dimessi_guariti:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
-          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='4' first-period='0' include-future='true' include-null='false' last-period='0' period-type='day' period-type-v2='day' />
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='4' first-period='0' include-future='true' include-null='false' last-period='0' period-anchor='#2020-04-08 00:00:00#' period-type='day' period-type-v2='day' />
           <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
             <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
@@ -1374,6 +1373,9 @@
             <encodings>
               <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:dimessi_guariti:qk]' />
             </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
@@ -1572,6 +1574,9 @@
             <encodings>
               <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:isolamento_domiciliare:qk]' />
             </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
@@ -1913,6 +1918,9 @@
             <encodings>
               <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[usr:Calculation_75646436946989056:qk]' />
             </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
@@ -1994,12 +2002,7 @@
               <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:totale_ospedalizzati:qk]' />
             </encodings>
             <customized-tooltip>
-              <formatted-text>
-                <run fontcolor='#787878'>posti_letto:&#9;</run>
-                <run bold='true'>Æ </run>
-                <run>Æ&#10;</run>
-                <run fontcolor='#787878'>last_casi:&#9;</run>
-              </formatted-text>
+              <formatted-text />
             </customized-tooltip>
             <style>
               <style-rule element='mark'>
@@ -2398,7 +2401,7 @@
             <column-instance column='[tamponi]' derivation='Sum' name='[sum:tamponi:qk]' pivot='key' type='quantitative' />
             <column datatype='integer' name='[tamponi]' role='measure' type='quantitative' />
           </datasource-dependencies>
-          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='4' first-period='0' include-future='true' include-null='false' last-period='0' period-type='day' period-type-v2='day' />
+          <filter class='relative-date' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]' filter-group='4' first-period='0' include-future='true' include-null='false' last-period='0' period-anchor='#2020-04-08 00:00:00#' period-type='day' period-type-v2='day' />
           <filter class='categorical' column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:regione:nk]' filter-group='7'>
             <groupfilter function='level-members' level='[none:regione:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
@@ -2437,6 +2440,9 @@
             <encodings>
               <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:tamponi:qk]' />
             </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
@@ -2504,6 +2510,9 @@
             <encodings>
               <text column='[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:terapia_intensiva:qk]' />
             </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
             <customized-label>
               <formatted-text>
                 <run>Æ </run>
@@ -2814,8 +2823,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='3350' minheight='3350' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='215' type='layout-basic' w='100000' x='0' y='0'>
-              <zone h='99112' id='214' param='vert' type='layout-flow' w='98934' x='533' y='444'>
+            <zone h='100000' id='217' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99112' id='216' param='vert' type='layout-flow' w='98934' x='533' y='444'>
                 <zone fixed-size='77' h='4278' id='90' is-fixed='true' name='data' w='97533' x='1467' y='1056'>
                   <layout-cache minheight='115' type-h='scalable' type-w='fixed' />
                   <zone-style>
@@ -3503,6 +3512,28 @@
         </viewpoint>
         <viewpoint name='tamp_tot'>
           <zoom type='entire-view' />
+          <selection-collection>
+            <tuple-selection>
+              <tuple-reference>
+                <tuple-descriptor>
+                  <pane-descriptor>
+                    <x-fields />
+                    <y-fields />
+                  </pane-descriptor>
+                  <columns>
+                    <field>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:deceduti:qk]</field>
+                    <field>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:dimessi_guariti:qk]</field>
+                    <field>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[sum:tamponi:qk]</field>
+                  </columns>
+                </tuple-descriptor>
+                <tuple>
+                  <value>17669</value>
+                  <value>26491</value>
+                  <value>807125</value>
+                </tuple>
+              </tuple-reference>
+            </tuple-selection>
+          </selection-collection>
         </viewpoint>
         <viewpoint name='terapia_reg'>
           <zoom type='entire-view' />
