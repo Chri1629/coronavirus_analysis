@@ -693,7 +693,7 @@
           </metadata-records>
         </connection>
       </extract>
-      <layout dim-ordering='alphabetic' dim-percentage='0.321839' measure-ordering='alphabetic' measure-percentage='0.511494' parameter-percentage='0.166667' show-structure='true' user-set-layout='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.321839' measure-ordering='alphabetic' measure-percentage='0.510057' parameter-percentage='0.168103' show-structure='true' user-set-layout='true' />
       <style>
         <style-rule element='mark'>
           <encoding attr='color' field='[:Measure Names]' type='palette'>
@@ -4466,7 +4466,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='222' />
+      <active id='-1' />
       <device-preview visible='true'>
         <device is-portrait='false' name='iPad Pro 12.9-inch' type='Desktop' />
         <device is-portrait='true' type='Phone' />
@@ -4857,6 +4857,28 @@
         </edge>
       </cards>
       <viewpoint>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:ok]</field>
+                  </x-fields>
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[tdy:data:ok]</field>
+                  <field>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[pcdf:sum:terapia_intensiva:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>#2020-04-14 00:00:00#</value>
+                <value>%null%</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
         <highlight>
           <color-one-way>
             <field>[federated.1a2ckd108jo6oc16lhh8v14mbtwk].[none:data:qk]</field>
