@@ -4,6 +4,7 @@ import pandas as pd
 dati = pd.read_csv("dpc-covid19-ita-regioni.csv")
 dati_p = pd.read_csv("dpc-covid19-ita-province.csv")
 regioni = pd.read_csv("regioni.csv")
+pd.set_option('chained_assignment',None)
 # devo unire i dati del trentino
 df_r = dati.loc[(dati['denominazione_regione'] == "P.A. Bolzano") | (dati['denominazione_regione'] == "P.A. Trento")]
 df_trentino = df_r.groupby("data").sum()
