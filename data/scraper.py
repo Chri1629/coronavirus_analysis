@@ -13,12 +13,15 @@ def scrape():
     with open("dati_province.csv", "w", encoding = "utf-8") as csv_file:
         writer = csv.writer(csv_file, delimiter = ",")
         for line in data_p:
-            writer.writerow(re.split(',+', line))
+            l = re.split(',', line)
+            if len(l) > 11:
+                l = l[:11]
+            writer.writerow(l)
 
     with open("dati_regioni.csv", "w", encoding = "utf-8") as csv_file:
         writer = csv.writer(csv_file, delimiter = ",")
         for line in data_r:
-            l = re.split(',+', line)
+            l = re.split(',', line)
             if len(l) > 21:
                 l = l[:21]
             
