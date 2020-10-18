@@ -29,7 +29,7 @@ def fix_datasets():
     # Province
     dati_p = pd.read_csv("dati_province.csv")
     #i in fase di definizione sono inutili
-    dati_p = dati_p[dati_p['denominazione_provincia'] != "In fase di definizione/aggiornamento"] # drop in fase di aggiornamento
+    #dati_p = dati_p[dati_p['denominazione_provincia'] != "In fase di definizione/aggiornamento"] # drop in fase di aggiornamento
     pd.set_option('mode.chained_assignment', None)
     df_tb = dati_p.loc[(dati_p['denominazione_regione'] == "P.A. Bolzano") | (dati_p['denominazione_regione'] == "P.A. Trento")]
     df_tb.loc['denominazione_regione'] = "Trentino Alto Adige"
@@ -41,10 +41,10 @@ def fix_datasets():
 
     dati_p_fix = pd.concat([dati_p, df_tb], sort=False)
     dati_p_fix = dati_p_fix.drop(dati_p_fix[["note"]], axis=1)
-    dati_p_fix[dati_p_fix["codice_regione"] == 4]
-    dati_fix_p = dati_p_fix[dati_p_fix["denominazione_provincia"] != "Fuori Regione / Provincia Autonoma"]
-
-    dati_fix_p.to_csv("dati_p.csv")
+    #dati_p_fix[dati_p_fix["codice_regione"] == 4]
+    #dati_p_fix = dati_p_fix[dati_p_fix["denominazione_provincia"] != "Fuori Regione / Provincia Autonoma"]
+    
+    dati_p_fix.to_csv("dati_p.csv")
     print("Dataset Province fixed")
 
 
